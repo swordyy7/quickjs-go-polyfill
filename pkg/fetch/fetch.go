@@ -51,7 +51,7 @@ func prepareReq(ctx *quickjs.Context, args []quickjs.Value) (*http.Request, erro
 		}
 	}
 
-	if jsReq.Method != "" {
+	if jsReq.Method == "" {
 		jsReq.Method = "GET"
 	}
 
